@@ -1,7 +1,8 @@
 # AlgoFun - An algorithm portal for geeks
-### Link to [Demo](https://algofun-b2c47.firebaseapp.com/)
+### Link to [Demo](https://algofun-b2c47.firebaseapp.com/) 
+(might needs a few seconds for the first time to load data from server)
 
-## AlgoFun is an easy-to-use social blogging app for geeks to share and discuss cool topics, ideas and real world applications of algorithms.
+### AlgoFun is an easy-to-use social blogging app for geeks to share and discuss cool topics, ideas and real world applications of algorithms.
 
 ## Key features: 
     - Sign up for an account
