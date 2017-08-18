@@ -1,0 +1,78 @@
+<nav class="navbar navbar-inverse navbar-toggleable-md bg-primary">
+  <a class="navbar-brand title" routerLink="/">AlgoFun</a>
+
+  <!-- Show this for logged out users -->
+  <ul *showAuthed="false"
+      class="nav navbar-nav navbar-toggler-right">
+
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLink="/">
+        Home
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLink="/login"
+         routerLinkActive="active">
+        Sign in
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLink="/register"
+         routerLinkActive="active">
+        Sign up
+      </a>
+    </li>
+
+  </ul>
+
+  <!-- Show this for logged in users -->
+  <ul *showAuthed="true"
+      class="nav navbar-nav navbar-toggler-right">
+
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLink="/"
+         routerLinkActive="active"
+         [routerLinkActiveOptions]="{ exact: true }">
+        <i class="ion-home"></i>
+        Home
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"
+         routerLink="/editor"
+         routerLinkActive="active">
+        <i class="ion-edit"></i>&nbsp;
+        New Post
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"
+         [routerLink]="['/profile', currentUser.username]"
+         routerLinkActive="active">
+        <img [src]="currentUser.image" *ngIf="currentUser.image" class="user-pic" />
+        {{ currentUser.username }}
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link"
+         (click)="logout()"
+        >
+        <i class="ion-close-circled"></i>&nbsp;
+        Log out
+      </a>
+    </li>
+
+
+
+
+  </ul>
+</nav>

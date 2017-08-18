@@ -1,0 +1,28 @@
+<div class="row article-meta">
+  <div class="col-sm-11">
+    <div class="line" id="imgElement">
+      <a [routerLink]="['/profile', article.author.username]">
+        <img class = "img-circle title-img" [src]="article.author.image"/>
+      </a>
+    </div>
+
+    <div class="line">
+      <div id="authorElement">
+        <a class="author text-primary"
+           [routerLink]="['/profile', article.author.username]">
+          {{ article.author.username }}
+        </a>
+      </div>
+      <div id="dateElement">
+        <a class="date sub-text">
+          {{ article.createdAt | date: 'longDate' }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <span class="col-sm-1">
+      <ng-content></ng-content>
+  </span>
+</div>
